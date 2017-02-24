@@ -7,3 +7,48 @@ _h=d.createElement('li');_h.innerHTML='<div class="col-sm-6 col-md-4"><div class
 _h=d.createElement('a');_h.href='#load-more';_h.innerHTML=cfg.navText;_h.onclick=function(){fn.c(o.l,o.j,o.k);return false;};}else{_h=d.createElement('a');_h.href='#reset-content';_h.innerHTML=cfg.resetToc;_h.onclick=function(){o.i=-1;o.e.innerHTML=cfg.counting;o.f.innerHTML="";fn.c(0,null,'published');o.a.innerHTML=o.a.innerHTML;o.b.children[0].innerHTML=o.b.children[0].innerHTML;return false;};}
 o.g.appendChild(_h);o.a.disabled=false;o.b.children[0].disabled=false;},e:function(json){var a=json.feed.category,b='<select id="label-sorter"><option value="" selected disabled>Pilih Kategori...</option>';for(var i=0,len=a.length;i<len;i++){b+='<option value="'+ encodeURIComponent(a[i].term)+'">'+ encodeURIComponent(a[i].term)+'</option>';}
 b+='</select>';o.b.innerHTML=b;o.b.children[0].onchange=function(){o.i=-1;o.f.innerHTML="";o.g.innerHTML=cfg.loading;fn.c(0,this.value,o.k);};}};loadToc=fn.d;loadCategories=fn.e;fn.b(cfg.homePage+'/feeds/posts/summary?alt=json-in-script&start-index='+(o.i+ 1)+'&max-results='+ cfg.maxResults+'&orderby=published&callback=loadToc');fn.b(cfg.homePage+'/feeds/posts/summary?alt=json-in-script&max-results=0&orderby=published&callback=loadCategories');o.a.onchange=function(){o.i=-1;o.f.innerHTML="";o.g.innerHTML=cfg.counting;o.b.children[0].innerHTML=o.b.children[0].innerHTML;fn.c(0,null,this.value);o.k=this.value;};o.c.onsubmit=function(){o.i=-1;o.f.innerHTML="";o.m=o.d.value;fn.c(1,o.d.value,o.k);return false;};}};_toc.init();
+
+$(function(){ // document ready
+   if ($('#sidebar1,#sidebar3').length) { // make sure "#sticky" element exists
+      var el = $('#sidebar1,#sidebar3');
+      var stickyTop = $('#sidebar1,#sidebar3').offset().top; // returns number
+      var stickyHeight = $('#sidebar1,#sidebar3').height();
+
+      $(window).scroll(function(){ // scroll event
+          var limit = $('#sticky_stoper').offset().top - stickyHeight - 20;
+
+          var windowTop = $(window).scrollTop(); // returns number
+
+          if (stickyTop < windowTop){
+             el.css({ position: 'fixed', top: '65px' });
+             el.addClass("sticky_widget");
+          }
+          else {
+             el.css('position','static');
+             el.removeClass("sticky_widget");
+          }
+
+          if (limit < windowTop) {
+          var diff = limit - windowTop;
+          el.css({top: diff});
+          el.removeClass("sticky_widget");
+          }
+        });
+   }
+});
+
+var showNavbar = function(){
+    var w = $(this).width();
+    if(w > 640 && $(window).scrollTop() > 100){
+        $('.navbar-header').show();
+    } else {
+        $('.navbar-header').hide();
+    }
+};
+
+$(window).resize(function(){
+   showNavbar();
+});
+$(window).scroll(function(){
+    showNavbar();
+});
