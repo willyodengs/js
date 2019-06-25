@@ -1,0 +1,38 @@
+{
+  "name": "MontirBox",
+  "short_name": "MontirBox",
+  "start_url": "https://www.montirbox.com/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "description": "Tips, tutorial dan perbaikan tentang masalah elektronik, komputer serta gadget seperti TV, PS2, PS3. PS4, Laptop, Handphone, Android.",
+  "icons": [{
+    "src": "https://1.bp.blogspot.com/-H-pH06Uu6NQ/XRF1co1KHfI/AAAAAAABLGA/xYlSjTzf5T8pzM3B92X3i6zp6w756ruKACLcBGAs/s48/montirbox.png",
+    "sizes": "48x48",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-H-pH06Uu6NQ/XRF1co1KHfI/AAAAAAABLGA/xYlSjTzf5T8pzM3B92X3i6zp6w756ruKACLcBGAs/s72/montirbox.png",
+    "sizes": "72x72",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-H-pH06Uu6NQ/XRF1co1KHfI/AAAAAAABLGA/xYlSjTzf5T8pzM3B92X3i6zp6w756ruKACLcBGAs/s96/montirbox.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-H-pH06Uu6NQ/XRF1co1KHfI/AAAAAAABLGA/xYlSjTzf5T8pzM3B92X3i6zp6w756ruKACLcBGAs/s144/montirbox.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-H-pH06Uu6NQ/XRF1co1KHfI/AAAAAAABLGA/xYlSjTzf5T8pzM3B92X3i6zp6w756ruKACLcBGAs/s168/montirbox.png",
+    "sizes": "168x168",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-H-pH06Uu6NQ/XRF1co1KHfI/AAAAAAABLGA/xYlSjTzf5T8pzM3B92X3i6zp6w756ruKACLcBGAs/s192/montirbox.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "https://1.bp.blogspot.com/-H-pH06Uu6NQ/XRF1co1KHfI/AAAAAAABLGA/xYlSjTzf5T8pzM3B92X3i6zp6w756ruKACLcBGAs/s512/montirbox.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }]
+}
