@@ -1,0 +1,1 @@
+function fixedRelateds(){var e=document.getElementById("fixed-related");window.pageYOffset+window.innerHeight>=document.body.offsetHeight?(e.style.transition="right 0.7s ease-in-out 0s",e.style.right="0px"):(e.style.transition="right 0.7s ease-in-out 0s",e.style.right="-452px")}window.onscroll=fixedRelateds;
